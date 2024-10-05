@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Level 2 Task 1 Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <!-- Expression and Result Display -->
+                <input type="text" id="expression" disabled  />
+                <input type="text" id="result" disabled  />
+        </div>
+        <div class="buttons">
+            <!-- Calculator Buttons -->
+            <button class="du" onclick="btnInput('(')">&#40;</button>
+            <button class="du" onclick="btnInput(')')">&#41;</button>
+            <button class="du" onclick="insertAns()">ans</button>
+            <button class="du" onclick="deleteLast()">del</button>
+            <button class="du" onclick="clearScreen()">clear</button>
+            <button onclick="btnInput('7')">7</button>
+            <button onclick="btnInput('8')">8</button>
+            <button onclick="btnInput('9')">9</button>
+            <button class="du" onclick="btnInput('%')">&#37;</button>
+            <button class="du" onclick="btnInput('sqrt(')">&#8730;</button>
+            <button onclick="btnInput('4')">4</button>
+            <button onclick="btnInput('5')">5</button>
+            <button onclick="btnInput('6')">6</button>
+            <button class="du" onclick="btnInput('*')">&#215;</button>
+            <button class="du" onclick="btnInput('÷')">&#247;</button>
+            <button onclick="btnInput('1')">1</button>
+            <button onclick="btnInput('2')">2</button>
+            <button onclick="btnInput('3')">3</button>
+            <button class="du" onclick="btnInput('+')">+</button>
+            <button class="du" onclick="btnInput('-')">-</button>
+            <button class="du" onclick="btnInput('.')">.</button>
+            <button onclick="btnInput('0')">0</button>
+            <button class="du" class="sign-btn" onclick="toggleSign()">±</button>
+            <button class="enter-btn" onclick="calculateResult()">ENTER</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
