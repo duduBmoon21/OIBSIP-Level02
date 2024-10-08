@@ -1,32 +1,32 @@
-// JavaScript for a simple interaction on the play button
-// document.getElementById('playVideo').addEventListener('click', function() {
-//     alert('Video Play Feature Coming Soon!');
-// });
+// // JavaScript for a simple interaction on the play button
+// // document.getElementById('playVideo').addEventListener('click', function() {
+// //     alert('Video Play Feature Coming Soon!');
+// // });
 
-// global variable for the player
-var player;
+// // Load the IFrame Player API code asynchronously.
+// var tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// this function gets called when API is ready to use
-function onYouTubePlayerAPIReady() {
-  // create the global player from the specific iframe (#video)
-  player = new YT.Player("video", {
-    events: {
-      // call this function when player is ready to use
-      onReady: onPlayerReady
-    }
-  });
-}
+// var player;
 
-function onPlayerReady(event) {
-  // bind events
-  var playButton = document.getElementById("playVideo");
-  playButton.addEventListener("click", function () {
-    player.playVideo();
-  });
-}
+// // This function creates an <iframe> and YouTube player after the API code downloads.
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('player', {
+//     height: '390',
+//     width: '640',
+//     videoId: 'YOUR_VIDEO_ID', 
+//     events: {
+//       'onReady': onPlayerReady
+//     }
+//   });
+// }
 
-// Inject YouTube API script
-var tag = document.createElement("script");
-tag.src = "//www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// // The API will call this function when the video player is ready.
+// function onPlayerReady(event) {
+//   var playButton = document.getElementById("playVideo");
+//   playButton.addEventListener("click", function() {
+//     player.playVideo();
+//   });
+// }
