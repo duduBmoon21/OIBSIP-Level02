@@ -35,25 +35,33 @@ function deleteLast() {
 
 function calculateResult() {
     try {
-        // Replace 'sqrt(' with 'Math.sqrt(' for square root calculations.
+        // Replace 'sqrt(' with 'Math.sqrt(' for square root calculations
         let expression = currentExpression.replace(/sqrt\(/g, 'Math.sqrt(');
+        
+        // Check for division by zero before evaluating the expression
+        if (/\/0+(?!\.)/.test(expression)) {  // Matches division by zero (not decimals)
+            resultDisplay.value = 'Error: Division by Zero';
+            return;
+        }
 
-        // Optional: Log the expression to debug
-        console.log("Evaluating expression:", expression);
-
-        // Evaluate the expression safely
+        // Safely evaluate the mathematical expression using eval
         let result = eval(expression);
 
-        // Display the result in 'resultDisplay'
-        resultDisplay.value = result;
-
-        // Store the result in 'ans' for future use
-        ans = result;
+        // Handle results like Infinity or -Infinity due to division by zero or large numbers
+        if (result === Infinity || result === -Infinity) {
+            resultDisplay.value = 'Error: Division by Zero';
+        } else {
+            // Display the result in 'resultDisplay'
+            resultDisplay.value = result;
+            // Store the result in 'ans' for future use
+            ans = result;
+        }
     } catch (e) {
         console.error("Error evaluating expression:", e);
         resultDisplay.value = 'Error';
     }
 }
+
 
 function insertAns() {
     currentExpression += ans; 
