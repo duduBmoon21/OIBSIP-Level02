@@ -35,17 +35,23 @@ function deleteLast() {
 
 function calculateResult() {
     try {
-        // Replace 'sqrt(' with 'Math.sqrt(' to handle square root calculations correctly.
+        // Replace 'sqrt(' with 'Math.sqrt(' for square root calculations.
         let expression = currentExpression.replace(/sqrt\(/g, 'Math.sqrt(');
-        // Safely evaluate the mathematical expression using eval.
-        let result = eval(expression); 
-        resultDisplay.value = result; 
-        // Display the result in 'resultDisplay'.
-        ans = result;  
-        // Store the result in 'ans' for future use.
+
+        // Optional: Log the expression to debug
+        console.log("Evaluating expression:", expression);
+
+        // Evaluate the expression safely
+        let result = eval(expression);
+
+        // Display the result in 'resultDisplay'
+        resultDisplay.value = result;
+
+        // Store the result in 'ans' for future use
+        ans = result;
     } catch (e) {
-        resultDisplay.value = 'Error'; 
-        // If there's an error during evaluation, display 'Error' in 'resultDisplay'.
+        console.error("Error evaluating expression:", e);
+        resultDisplay.value = 'Error';
     }
 }
 
