@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #fffcff; /* Match the background color */
+    background-color: #fffcff; 
 }
 
 .calculator {

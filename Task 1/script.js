@@ -1,16 +1,7 @@
 let expressionDisplay = document.getElementById('expression'); 
-// Declare a variable 'expressionDisplay' and assign it the DOM element with the ID 'expression',
-// which will be used to display the current mathematical expression.
-
 let resultDisplay = document.getElementById('result');
-// Declare a variable 'resultDisplay' and assign it the DOM element with the ID 'result',
-// which will be used to display the result of the calculation.
-
 let currentExpression = '';
-// Initialize a variable 'currentExpression' as an empty string to hold the user's input expression.
-
 let ans = 0;
-// Initialize a variable 'ans' to 0 to store the last calculated result.
 
 function btnInput(number) {
     currentExpression += number; 
