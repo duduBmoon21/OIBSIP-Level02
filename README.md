@@ -7,7 +7,7 @@
 
 ### TASK 2 Tribute Page
 
- [**Tribute-Page**](https://oibsip-level02-viyp.vercel.app)
+ [**Tribute-Page**](https://oibsip-tributepage.vercel.app)
 
 ### TASK 3- A Basic To-Do Webapp 
 
