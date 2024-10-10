@@ -3,55 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List Web App</title>
+    <title>My To-Do </title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>A Basic To-Do Webapp</h1>
-</header>
-<div class="container">
-    <div class="input-section">
-        <label for="task-title">Title</label>
-        <input type="text" id="task-title" placeholder="Task title">
-        <label for="task-desc">Description</label>
-        <textarea id="task-desc" placeholder="Description"></textarea>
-        <button id="addTask" class="save-btn">Save</button>
-    </div>
-
-    <div class="task-sections">
-        <h2>Pending Tasks</h2>
-        <div class="task-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Date Added</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="pending-tasks-list"></tbody>
-            </table>
+    <header>
+        <h1>My To-Do App</h1>
+    </header>
+    <div class="container">
+        <div class="input-section">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="Enter task title">
+            <label for="task-desc">Description</label>
+            <textarea id="task-desc" placeholder="Enter task description"></textarea>
+            <button id="addTask" class="save-btn">Add Task</button>
         </div>
 
-        <h2>Completed Tasks</h2>
-        <div class="task-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Date Completed</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="completed-tasks-list"></tbody>
-            </table>
+        <div class="task-sections">
+            <div class="task-list pending-tasks">
+                <h2>Pending Tasks</h2>
+                <div class="task-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Date Added</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pending-tasks-list"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="task-list completed-tasks">
+                <h2>Completed Tasks</h2>
+                <div class="task-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Date Completed</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="completed-tasks-list"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

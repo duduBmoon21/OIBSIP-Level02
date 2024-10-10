@@ -51,9 +51,9 @@ function renderTasks() {
             <td>${task.description}</td>
             <td>${task.isCompleted ? task.dateCompleted : task.dateAdded}</td>
             <td>
-                <button class="delete-btn" onclick="deleteTask(${task.id})">X</button>
-                ${!task.isCompleted ? `<button class="complete-btn" onclick="completeTask(${task.id})">Complete</button>` : ''}
-                <button class="edit-btn" onclick="editTask(${task.id})">Edit</button>
+                <button class="action-btn delete-btn" onclick="deleteTask(${task.id})">Delete</button>
+                ${!task.isCompleted ? `<button class="action-btn complete-btn" onclick="completeTask(${task.id})">Complete</button>` : ''}
+                <button class="action-btn edit-btn" onclick="editTask(${task.id})">Edit</button>
             </td>
         `;
         if (task.isCompleted) {
